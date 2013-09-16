@@ -1,16 +1,22 @@
-# Ruby on Rails Tutorial: sample application
+# The website User Narration:
 
-This is the sample application for
-[*Ruby on Rails Tutorial: Learn Web Development with Rails*](http://railstutorial.org/)
-by [Michael Hartl](http://michaelhartl.com/). You can use this reference implementation to help track down errors if you end up having trouble with code in the tutorial. In particular, as a first debugging check I suggest getting the test suite to pass on your local machine:
+As a CMU student, user can find other CMU students nearby through the website. The customers should use their Andrew ID to login so that it can ensure all the users are CMU students.
+First, user can use Andrew ID to login.
+Then he/she can press “Refresh” button to get all the nearby students listed in a window. Some of them would have photos. User also can control who are displayed in the window, for example, only man/women, age below 30, or only display students who have photo.
+If the user is interested in some students, he/she can send message to the student by tapping the “chat” button. This may open a new window to chat.
+By pressing the “New message” button, user can view message sent to him/her when the user are offline.
+By pressing the “Profile” button, the user can upload photo, record location, etc.
 
-    $ cd /tmp
-    $ git clone git@github.com:railstutorial/sample_app_2nd_ed.git
-    $ cd sample_app_2nd_ed
-    $ cp config/database.yml.example config/database.yml
-    $ bundle install
-    $ bundle exec rake db:migrate
-    $ bundle exec rake db:test:prepare
-    $ bundle exec rspec spec/
+This system has two models:
+1. Authentication model: This is used to confirm the user is a CMU student. The system can connect to CMU's system to confirm the student's Andrew account.
 
-If the tests don't pass, it means there may be something wrong with your system. If they do pass, then you can debug your code by comparing it with the reference implementation.
+2. Searching model: This can search nearby students, the nearest students rank first on the list. This model should access the database, which store student’s name, location.
+
+Users:
+All the users are CMU students.
+
+Interesting point：
+As the system is restricted to CMU students, users can make friends with well-educated people.
+
+Using condition:
+As we should get the location, so the user should input his/her location. If this website runs on smartphone, it would be easier because the location can be got automatically.
