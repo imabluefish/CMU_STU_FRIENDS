@@ -18,5 +18,6 @@ All the users are CMU students.
 Interesting point：
 As the system is restricted to CMU students, users can make friends with well-educated people.
 
+
 Using condition:
 As we should get the location, so the user should input his/her location. If this website runs on smartphone, it would be easier because the location can be got automatically.
