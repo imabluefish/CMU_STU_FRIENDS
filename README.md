@@ -9,15 +9,13 @@ By pressing the “Profile” button, the user can upload photo, record location
 
 This system has two models:
 1. Authentication model: This is used to confirm the user is a CMU student. The system can connect to CMU's system to confirm the student's Andrew account.
-
-2. Searching model: This can search nearby students, the nearest students rank first on the list. This model should access the database, which store student’s name, location.
+2. Relationship model: This can show the user's favorite friends and who likes the user.
 
 Users:
 All the users are CMU students.
 
 Interesting point：
 As the system is restricted to CMU students, users can make friends with well-educated people.
-
 
 Using condition:
 As we should get the location, so the user should input his/her location. If this website runs on smartphone, it would be easier because the location can be got automatically.
